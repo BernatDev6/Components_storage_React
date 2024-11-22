@@ -1,0 +1,195 @@
+:root {
+  /* Colores */
+  --primary-color: #8ec7fc; /* Color principal */
+  --primary-text-color: #e0e0e0; /* Texto principal */
+  --color-bg-primary: #121212; /* Fondo principal */
+  --color-bg-secondary: #1f1f1f; /* Fondo secundario */
+  --color-overlay: 20, 20, 20; /* Fondo terciario */
+
+  /* Tipografía */
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-medium: 1rem; /* 16px */
+  --font-size-large: 1.6rem; /* 25.6px */
+
+  /* Espaciados */
+  --space-small: 0.5rem; /* 8px */
+  --space-medium: 1rem; /* 16px */
+  --space-large: 2rem; /* 32px */
+
+  /* Bordes */
+  --border-radius: 8px; /* 8px */
+}
+
+
+.viewer-container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--primary-text-color);
+}
+
+.component-list {
+  width: 10%;
+  background-color: var(--color-bg-secondary);
+  padding: var(--space-medium);
+  overflow-y: auto;
+}
+
+.component-item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: none;
+  border: none;
+  padding: var(--space-small) var(--space-medium);
+  margin: var(--space-small) 0;
+  cursor: pointer;
+  transition: background 0.3s;
+  color: var(--primary-text-color);
+}
+
+.component-item.active,
+.component-item:hover {
+  color: var(--primary-color);
+}
+
+.component-display {
+  flex: 1;
+  margin: var(--space-large);
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--color-bg-secundary);
+  border-radius: var(--border-radius);
+  gap: var(--space-large);
+}
+
+.component-show {
+  width: 30%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.component-result {
+  width: 100%;
+  height: 50%;
+  border-radius: var(--border-radius);
+  background-color: var(--color-bg-secondary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.code-tabs {
+  flex: 2;
+  margin-top: var(--space-medium);
+}
+
+.tabs {
+  display: flex;
+  width: 70%;
+}
+
+.tab {
+  padding: var(--space-small) var(--space-medium);
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: color 0.3s;
+  color: var(--primary-text-color);
+}
+
+.tab.active {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
+
+.tab:focus, .tab:focus-visible {
+  outline: none;
+}
+
+.tab.active:focus, .tab.active:focus-visible {
+  outline: none;
+}
+
+.tab-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: var(--primary-text-color);
+}
+
+.copy-btn {
+  padding: var(--space-small) var(--space-medium);
+  font-size: var(--font-size-small);
+  border-radius: var(--border-radius);
+  margin-left: auto;
+}
+
+.pre-content {
+  width: 100%;
+}
+
+.pre-content {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+.pre-content pre {
+  margin: 0;
+  background-color: var(--color-bg-secondary);
+  color: var(--primary-text-color);
+  padding: var(--space-small) var(--space-medium);
+  border-radius: var(--border-radius);
+  position: relative;
+  cursor: pointer;
+  overflow: auto;
+  height: 70vh;
+}
+
+/* Estiliza el scrollbar en navegadores basados en WebKit */
+.pre-content pre::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar */
+  height: 8px; /* Altura del scrollbar horizontal (si hay) */
+}
+
+/* Estilo del fondo del scrollbar */
+.pre-content pre::-webkit-scrollbar-track {
+  background-color: var(--color-bg-secondary-light); /* Fondo del track (parte donde se mueve el pulgar) */
+  border-radius: var(--border-radius);
+}
+
+/* Estilo del pulgar (la parte que se mueve) */
+.pre-content pre::-webkit-scrollbar-thumb {
+  background-color: var(--primary-text-color); /* Color del pulgar */
+  border-radius: var(--border-radius); /* Bordes redondeados */
+  border: 3px solid var(--primary-text-color); /* Borde sutil alrededor del pulgar */
+}
+
+.copy-overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--color-overlay), 0.8);
+  color: white;
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.pre-content:hover .copy-overlay {
+  opacity: 1;
+}
+
