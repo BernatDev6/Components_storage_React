@@ -1,26 +1,27 @@
 import React from 'react';
 import './ButtonComp2.css'
 
-export const NewButtonExample = () => {
+export const ButtonComp2 = () => {
   return (
-    <button className="new-button-example">
+    <button className="button2">
       Hover Me!
     </button>
   );
 };
 
-export const newButtonExampleJSX = `
-export const NewButtonExample = () => {
+export const ButtonComp2JSX = `
+export const ButtonComp2 = () => {
   return (
-    <button className="new-button-example">
+    <button className="button2">
       Hover Me!
     </button>
   );
 };
 `;
 
-export const newButtonExampleCSS = `
-.new-button-example {
+export const ButtonComp2CSS = `
+.button2 {
+    font-size: 18px;
     background-color: #1e88e5;
     color: #d6f0fc;
     border: none;
@@ -30,7 +31,7 @@ export const newButtonExampleCSS = `
     transition: background-color 0.3s, color 0.3s;
   }
   
-  .new-button-example:hover {
+  .button2:hover {
     color: #1e88e5;
     background-color: #d6f0fc;
   }

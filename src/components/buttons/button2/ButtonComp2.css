@@ -1,4 +1,5 @@
-.new-button-example {
+.button2 {
+    font-size: 18px;
     background-color: #1e88e5;
     color: #d6f0fc;
     border: none;
@@ -8,7 +9,7 @@
     transition: background-color 0.3s, color 0.3s;
   }
   
-  .new-button-example:hover {
+  .button2:hover {
     color: #1e88e5;
     background-color: #d6f0fc;
   }

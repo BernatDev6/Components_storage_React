@@ -3,7 +3,7 @@
   --primary-color: #8ec7fc; /* Color principal */
   --primary-text-color: #e0e0e0; /* Texto principal */
   --color-bg-primary: #121212; /* Fondo principal */
-  --color-bg-secondary: #1f1f1f; /* Fondo secundario */
+  --color-bg-secondary: #2c2c2c; /* Fondo secundario */
   --color-overlay: 20, 20, 20; /* Fondo terciario */
 
   /* Tipografía */
@@ -125,22 +125,26 @@
 .copy-btn {
   padding: var(--space-small) var(--space-medium);
   font-size: var(--font-size-small);
-  border-radius: var(--border-radius);
   margin-left: auto;
+  background-color: transparent;
+  border: none;
+  color: var(--primary-text-color);
+  cursor: pointer;
+  transition: color .3s ease;
 }
 
-.pre-content {
-  width: 100%;
+.copy-btn:hover {
+  color: var(--primary-color);
 }
 
 .pre-content {
   position: relative;
-  overflow: hidden;
   height: 100%;
   width: 100%;
 }
 
 .pre-content pre {
+  white-space: pre-wrap;
   margin: 0;
   background-color: var(--color-bg-secondary);
   color: var(--primary-text-color);
@@ -150,6 +154,30 @@
   cursor: pointer;
   overflow: auto;
   height: 70vh;
+}
+
+.copy-overlay {
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(var(--color-overlay), 0.8);
+  color: var(--primary-text-color);
+  font-size: var(--font-size-large);
+  font-weight: bold;
+  border-radius: var(--border-radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none; /* Para poder hacer el scroll*/
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.pre-content:hover .copy-overlay {
+  opacity: 1;
 }
 
 /* Estiliza el scrollbar en navegadores basados en WebKit */
@@ -167,29 +195,6 @@
 /* Estilo del pulgar (la parte que se mueve) */
 .pre-content pre::-webkit-scrollbar-thumb {
   background-color: var(--primary-text-color); /* Color del pulgar */
-  border-radius: var(--border-radius); /* Bordes redondeados */
+  border-radius: var(--border-radius);
   border: 3px solid var(--primary-text-color); /* Borde sutil alrededor del pulgar */
 }
-
-.copy-overlay {
-  position: absolute;
-  top: 0; 
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(var(--color-overlay), 0.8);
-  color: white;
-  font-size: var(--font-size-large);
-  font-weight: bold;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
-}
-
-.pre-content:hover .copy-overlay {
-  opacity: 1;
-}
-

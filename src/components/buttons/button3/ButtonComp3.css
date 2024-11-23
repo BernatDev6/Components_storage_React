@@ -1,0 +1,41 @@
+.button3 {
+  background: linear-gradient(135deg, #fd6666, #9b2121);
+  color: white;
+  padding-left: 1.2em;
+  font-size: 18px;
+  border-radius: 0.9em;
+  border: none;
+  letter-spacing: 0.1em;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 2.8em;
+  padding-right: 3.3em;
+  cursor: pointer;
+}
+
+.button3 .icon {
+  background: white;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2.4em;
+  width: 2.4em;
+  border-radius: 0.7em;
+  right: 0.3em;
+  transition: all 0.3s;
+}
+
+.button3:hover .icon {
+  width: calc(100% - 0.45em);
+}
+
+.button3 .icon svg {
+  width: 1.1em;
+  color: #9b2121;
+}
+
+.button3:active .icon {
+  transform: scale(0.95);
+}

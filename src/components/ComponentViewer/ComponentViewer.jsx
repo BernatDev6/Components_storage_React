@@ -70,22 +70,26 @@ export const ComponentViewer = ({ components }) => {
               className="copy-btn"
               onClick={() => copyToClipboard(activeComponent.activeTab === 'jsx' ? activeComponent.jsxCode : activeComponent.cssCode)}
             >
-              Copy
+              <i className="fa-solid fa-copy"></i>
             </button>
             <div
               onClick={() => copyToClipboard(activeComponent.activeTab === 'jsx' ? activeComponent.jsxCode : activeComponent.cssCode)}
               className='pre-content'
             >
               {activeComponent.activeTab === 'jsx' ? (
-                <pre>
-                  {activeComponent.jsxCode} {/* Muestra el código JSX en un formato preformateado */}
+                <>
+                  <pre>
+                    {activeComponent.jsxCode} {/* Muestra el código JSX en un formato preformateado */}
+                  </pre>  
                   <div className='copy-overlay'>Copy</div> {/* Capa de 'Copy' */}
-                </pre>  
+                </>
               ) : (
-                <pre>
-                  {activeComponent.cssCode} {/* Muestra el código CSS en un formato preformateado */}
+                <>
+                  <pre>
+                    {activeComponent.cssCode} {/* Muestra el código CSS en un formato preformateado */}
+                  </pre>
                   <div className='copy-overlay'>Copy</div> {/* Capa de 'Copy' */}
-                </pre>
+                </>
               )}
             </div>
 

@@ -1,4 +1,5 @@
-.button-class {
+.button1 {
+    font-size: 18px;
     overflow: hidden;
     background-color: #ffffff00;
     color: #fff;
@@ -9,10 +10,12 @@
     transition: color 0.5s;
     z-index: 1;
 }
-.button-class:hover {
+
+.button1:hover {
     color: #000;
 }
-.button-class::before {
+
+.button1::before {
     content: "";
     height: 110%;
     background-color: #fff;
@@ -24,6 +27,7 @@
     width: 0%;
     z-index: -1;
 }
-.button-class:hover::before {
+
+.button1:hover::before {
     width: 145%;
 }
