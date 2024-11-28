@@ -36,6 +36,9 @@
   background-color: var(--color-bg-secondary);
   padding: var(--space-medium);
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .component-item {
@@ -57,21 +60,20 @@
 }
 
 .aside-section-title {
+  width: 100%;
+  text-align: start;
+  border-radius: var(--border-radius);
   background: transparent;
+  padding: var(--space-medium);
   border: none;
   color: var(--primary-text-color);
 }
 
 .aside-section-title:hover {
   color: var(--primary-color);
+  background: var(--color-bg-primary);
 }
-
-
-
-
-
-
-
+/**/
 
 .component-display {
   flex: 1;

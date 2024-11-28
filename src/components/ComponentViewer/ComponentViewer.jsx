@@ -21,17 +21,20 @@ export const ComponentViewer = ({ components }) => {
 
   // Función para copiar al portapapeles
   const copyToClipboard = (code) => {
-    navigator.clipboard.writeText(code).then(() => {
-      alert('Código copiado al portapapeles!'); // Alerta cuando se copie el código
-    }).catch((err) => {
-      console.error('Error al copiar el código: ', err); // Manejo de errores si algo sale mal
-    });
+    navigator.clipboard
+      .writeText(code)
+      .then(() => {
+        alert('Código copiado al portapapeles!'); // Alerta cuando se copie el código
+      })
+      .catch((err) => {
+        console.error('Error al copiar el código: ', err); // Manejo de errores si algo sale mal
+      });
   };
 
   // Efecto para seleccionar el primer componente por defecto
   useEffect(() => {
     const firstComponent = Object.values(components)
-      .flat() // Aplanamos todos los componentes en un solo array
+      .flatMap((section) => section.items) // Accedemos a los items de cada sección
       .find((comp) => comp); // Tomamos el primer componente
     if (firstComponent) {
       setActiveComponent(firstComponent);
@@ -49,16 +52,19 @@ export const ComponentViewer = ({ components }) => {
               className="aside-section-title"
               onClick={() => toggleSection(section)}
             >
-              {section} <i class="fa-solid fa-angle-down"></i> {/* Nombre de las secciones */}
+              {/* Mostramos el ícono y el nombre de la sección */}
+              <i className={components[section].icon}></i> <span>{section}</span> <i className="fa-solid fa-angle-down"></i>
             </button>
 
             {/* Si la sección está abierta, mostramos los componentes */}
             {openSections[section] && (
               <div className="component-items">
-                {components[section].map((comp, index) => (
+                {components[section].items.map((comp, index) => (
                   <button
                     key={index}
-                    className={`component-item ${activeComponent.name === comp.name ? 'active' : ''}`}
+                    className={`component-item ${
+                      activeComponent.name === comp.name ? 'active' : ''
+                    }`}
                     onClick={() => setActiveComponent(comp)}
                   >
                     {comp.name}
