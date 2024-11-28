@@ -1,9 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../ComponentViewer/ComponentViewer.css';
 
 export const ComponentViewer = ({ components }) => {
-  // Estado local que mantiene el componente activo (el que el usuario selecciona)
-  const [activeComponent, setActiveComponent] = useState(components[0]);  // Inicialmente el primer componente de la lista es el activo
+  // Inicializamos el primer componente por defecto
+  const [activeComponent, setActiveComponent] = useState({});
+  // Estado para las secciones desplegables
+  const [openSections, setOpenSections] = useState(
+    Object.keys(components).reduce((acc, section) => {
+      acc[section] = false;
+      return acc;
+    }, {})
+  );
+
+  const toggleSection = (section) => {
+    setOpenSections((prevSections) => ({
+      ...prevSections,
+      [section]: !prevSections[section],
+    }));
+  };
 
   // Función para copiar al portapapeles
   const copyToClipboard = (code) => {
@@ -14,23 +28,45 @@ export const ComponentViewer = ({ components }) => {
     });
   };
 
+  // Efecto para seleccionar el primer componente por defecto
+  useEffect(() => {
+    const firstComponent = Object.values(components)
+      .flat() // Aplanamos todos los componentes en un solo array
+      .find((comp) => comp); // Tomamos el primer componente
+    if (firstComponent) {
+      setActiveComponent(firstComponent);
+    }
+  }, [components]);
+
   return (
     <div className="viewer-container">
       {/* Lista de componentes - Un botón por cada componente */}
       <aside className="component-list">
-        {/* Recorremos los componentes pasados como prop */}
-        {components.map((comp, index) => (
-          <button
-            key={index}  // Usamos el índice como clave
-            className={`component-item ${
-              // Comprobamos si este componente está activo y le añadimos la clase "active" para resaltar el botón
-              activeComponent.name === comp.name ? 'active' : ''
-            }`}
-            // Cuando se hace clic en un botón, se cambia el componente activo
-            onClick={() => setActiveComponent(comp)}
-          >
-            {comp.name}  {/* Muestra el nombre del componente en el botón */}
-          </button>
+        {/* Recorremos todas las secciones */}
+        {Object.keys(components).map((section) => (
+          <div key={section} className="section">
+            <button
+              className="aside-section-title"
+              onClick={() => toggleSection(section)}
+            >
+              {section} <i class="fa-solid fa-angle-down"></i> {/* Nombre de las secciones */}
+            </button>
+
+            {/* Si la sección está abierta, mostramos los componentes */}
+            {openSections[section] && (
+              <div className="component-items">
+                {components[section].map((comp, index) => (
+                  <button
+                    key={index}
+                    className={`component-item ${activeComponent.name === comp.name ? 'active' : ''}`}
+                    onClick={() => setActiveComponent(comp)}
+                  >
+                    {comp.name}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
         ))}
       </aside>
 

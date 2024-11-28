@@ -49,7 +49,7 @@ export const ButtonComp3 = () => {
 
 export const ButtonComp3CSS = `
 .button3 {
-  background: linear-gradient(135deg, #fd6666, #9b2121);
+  background: linear-gradient(135deg, #9b2121, #fd6666);
   color: white;
   padding-left: 1.2em;
   font-size: 18px;
@@ -60,7 +60,7 @@ export const ButtonComp3CSS = `
   align-items: center;
   position: relative;
   height: 2.8em;
-  padding-right: 3.3em;
+  padding-left: 3.3em;
   cursor: pointer;
 }
 
@@ -73,7 +73,8 @@ export const ButtonComp3CSS = `
   height: 2.4em;
   width: 2.4em;
   border-radius: 0.7em;
-  right: 0.3em;
+  left: 0.2em;
+  top: 0.2em;
   transition: all 0.3s;
 }
 
