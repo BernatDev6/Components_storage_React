@@ -23,7 +23,7 @@
 
 .viewer-container {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   font-family: Arial, sans-serif;
   background-color: var(--color-bg-primary);
@@ -32,7 +32,6 @@
 
 /* Aside */
 .component-list {
-  width: 10%;
   background-color: var(--color-bg-secondary);
   padding: var(--space-medium);
   overflow-y: auto;
@@ -75,6 +74,16 @@
 }
 /**/
 
+@media (max-width: 1200px) {
+  .viewer-container {
+    flex-direction: column;
+  }
+
+  .component-list {
+    flex-direction: row;
+  }
+}
+
 .component-display {
   flex: 1;
   margin: var(--space-large);
@@ -85,7 +94,7 @@
   gap: var(--space-large);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
   .viewer-container {
     height: 100%;
   }
@@ -120,7 +129,7 @@
 }
 
 .code-tabs {
-  flex: 2;
+  flex: 1.5;
   margin-top: var(--space-medium);
 }
 

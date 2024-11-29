@@ -63,7 +63,7 @@ const App = () => {
     }
   };
 
-  return <ComponentViewer components={components} />;
+  return <ComponentViewer className="component-viewer" components={components} />;
 };
 
 export default App;
