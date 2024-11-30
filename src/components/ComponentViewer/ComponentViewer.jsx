@@ -1,140 +1,90 @@
+// ComponentViewer.jsx
 import React, { useState, useEffect } from 'react';
-import '../ComponentViewer/ComponentViewer.css';
+import { NavbarComponent } from '../NavbarComponente/NavbarComponent';
+import './ComponentViewer.css';
 
 export const ComponentViewer = ({ components }) => {
-  // Inicializamos el primer componente por defecto
   const [activeComponent, setActiveComponent] = useState({});
-  // Estado para las secciones desplegables
-  const [openSections, setOpenSections] = useState(
-    Object.keys(components).reduce((acc, section) => {
-      acc[section] = false;
-      return acc;
-    }, {})
-  );
 
-  const toggleSection = (section) => {
-    setOpenSections((prevSections) => ({
-      ...prevSections,
-      [section]: !prevSections[section],
-    }));
-  };
-
-  // Función para copiar al portapapeles
-  const copyToClipboard = (code) => {
-    navigator.clipboard
-      .writeText(code)
-      .then(() => {
-        alert('Código copiado al portapapeles!'); // Alerta cuando se copie el código
-      })
-      .catch((err) => {
-        console.error('Error al copiar el código: ', err); // Manejo de errores si algo sale mal
-      });
-  };
-
-  // Efecto para seleccionar el primer componente por defecto
   useEffect(() => {
     const firstComponent = Object.values(components)
-      .flatMap((section) => section.items) // Accedemos a los items de cada sección
-      .find((comp) => comp); // Tomamos el primer componente
+      .flatMap((section) => section.items)
+      .find((comp) => comp);
     if (firstComponent) {
       setActiveComponent(firstComponent);
     }
   }, [components]);
 
+  const copyToClipboard = (code) => {
+    navigator.clipboard
+      .writeText(code)
+      .then(() => alert('Código copiado al portapapeles!'))
+      .catch((err) => console.error('Error al copiar el código: ', err));
+  };
+
   return (
     <div className="viewer-container">
-      {/* Lista de componentes - Un botón por cada componente */}
-      <aside className="component-list">
-        {/* Recorremos todas las secciones */}
-        {Object.keys(components).map((section) => (
-          <div key={section} className="section">
-            <button
-              className="aside-section-title"
-              onClick={() => toggleSection(section)}
-            >
-              {/* Mostramos el ícono y el nombre de la sección */}
-              <i className={components[section].icon}></i> <span>{section}</span> <i className="fa-solid fa-angle-down"></i>
-            </button>
+      {/* Aside separado en su propio componente */}
+      <NavbarComponent
+        components={components}
+        activeComponent={activeComponent}
+        setActiveComponent={setActiveComponent}
+      />
 
-            {/* Si la sección está abierta, mostramos los componentes */}
-            {openSections[section] && (
-              <div className="component-items">
-                {components[section].items.map((comp, index) => (
-                  <button
-                    key={index}
-                    className={`component-item ${
-                      activeComponent.name === comp.name ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveComponent(comp)}
-                  >
-                    {comp.name}
-                  </button>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
-      </aside>
-
-      {/* Vista del componente seleccionado */}
       <div className="component-display">
-        <div className='component-show'>
-          <h2>{activeComponent.name}</h2> {/* Muestra el nombre del componente activo */}
-          <div className="component-result">
-            {activeComponent.component} {/* Muestra el componente en sí (su JSX renderizado) */}
-          </div>
+        <div className="component-show">
+          <h2>{activeComponent.name}</h2>
+          <div className="component-result">{activeComponent.component}</div>
         </div>
 
-        {/* Pestañas para mostrar el código del componente */}
         <div className="code-tabs">
           <div className="tabs">
-            {/* Pestaña React */}
             <button
               className={`tab ${activeComponent.activeTab === 'jsx' ? 'active' : ''}`}
-              onClick={() => setActiveComponent({ ...activeComponent, activeTab: 'jsx' })}  // Cambiar a la pestaña React
+              onClick={() =>
+                setActiveComponent({ ...activeComponent, activeTab: 'jsx' })
+              }
             >
               React Code
             </button>
-
-            {/* Pestaña CSS */}
             <button
               className={`tab ${activeComponent.activeTab === 'css' ? 'active' : ''}`}
-              onClick={() => setActiveComponent({ ...activeComponent, activeTab: 'css' })}  // Cambiar a la pestaña CSS
+              onClick={() =>
+                setActiveComponent({ ...activeComponent, activeTab: 'css' })
+              }
             >
               CSS Code
             </button>
           </div>
-
-          {/* Contenido de la pestaña activa */}
           <div className="tab-content">
-            {/* Botón para copiar el código */}
             <button
               className="copy-btn"
-              onClick={() => copyToClipboard(activeComponent.activeTab === 'jsx' ? activeComponent.jsxCode : activeComponent.cssCode)}
+              onClick={() =>
+                copyToClipboard(
+                  activeComponent.activeTab === 'jsx'
+                    ? activeComponent.jsxCode
+                    : activeComponent.cssCode
+                )
+              }
             >
               <i className="fa-solid fa-copy"></i>
             </button>
-            <div
-              onClick={() => copyToClipboard(activeComponent.activeTab === 'jsx' ? activeComponent.jsxCode : activeComponent.cssCode)}
-              className='pre-content'
+            <div className="pre-content"
+              onClick={() =>
+                copyToClipboard(
+                  activeComponent.activeTab === 'jsx'
+                    ? activeComponent.jsxCode
+                    : activeComponent.cssCode
+                )
+              }
             >
-              {activeComponent.activeTab === 'jsx' ? (
-                <>
-                  <pre>
-                    {activeComponent.jsxCode} {/* Muestra el código JSX en un formato preformateado */}
-                  </pre>  
-                  <div className='copy-overlay'>Copy</div> {/* Capa de 'Copy' */}
-                </>
-              ) : (
-                <>
-                  <pre>
-                    {activeComponent.cssCode} {/* Muestra el código CSS en un formato preformateado */}
-                  </pre>
-                  <div className='copy-overlay'>Copy</div> {/* Capa de 'Copy' */}
-                </>
-              )}
+              <div className="copy-overlay">Copy</div>
+              <pre>
+                {activeComponent.activeTab === 'jsx'
+                  ? activeComponent.jsxCode
+                  : activeComponent.cssCode}
+              </pre>
             </div>
-
           </div>
         </div>
       </div>

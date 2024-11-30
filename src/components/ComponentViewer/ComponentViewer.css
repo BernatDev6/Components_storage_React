@@ -37,7 +37,6 @@
   overflow-y: auto;
   display: flex;
   flex-direction: column;
-  gap: 8px;
 }
 
 .component-item {
@@ -77,10 +76,19 @@
 @media (max-width: 1200px) {
   .viewer-container {
     flex-direction: column;
+    height: 100%;
+  }
+
+  .component-display {
+    flex-direction: column;
   }
 
   .component-list {
     flex-direction: row;
+  }
+
+  .component-result {
+    padding: 40px 0;
   }
 }
 
@@ -92,20 +100,6 @@
   background-color: var(--color-bg-secundary);
   border-radius: var(--border-radius);
   gap: var(--space-large);
-}
-
-@media (max-width: 1000px) {
-  .viewer-container {
-    height: 100%;
-  }
-
-  .component-display {
-    flex-direction: column;
-  }
-
-  .component-result {
-    padding: 40px 0;
-  }
 }
 
 .component-show {
