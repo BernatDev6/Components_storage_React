@@ -1,12 +1,87 @@
 /* Botones de cada seccion de componentes */
-.section-button {
+.section-button, .component-button {
+    color: var(--primary-text-color);
     border: none;
+    border-radius: var(--border-radius);
     background: transparent;
     padding: var(--space-small) var(--space-medium);
     width: max-content;
     transition: color .3s ease;
 }
 
-.section-button:hover {
+.section-button:hover, .component-button:hover {
     color: var(--primary-color);
+}
+
+.section-button:hover {
+    background-color: var(--color-bg-primary);
+}
+
+
+/* Contenedor del menú de componentes */
+.component-sidebar {
+    background-color: var(--color-bg-secondary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 250px; /* Ancho del menú */
+    transform: translateX(-100%); /* Oculto fuera de la pantalla */
+    transition: transform 0.3s ease-in-out;
+    z-index: 30; /* Asegura que el menú esté encima del contenido */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.menu-open {
+    transform: translateX(0); /* Desliza el menú hacia adentro */
+}
+
+.menu-closed {
+    transform: translateX(-100%); /* Oculta el menú fuera de la pantalla */
+}
+
+/* Botón del menú hamburguesa */
+.menu-toggle {
+    background-color: var(--color-bg-secondary);
+    position: fixed;
+    width: 100%;
+    border: none;
+    color: var(--primary-text-color);
+    font-size: 1.5rem;
+    z-index: 20; /* Por debajo del menú (para no sobreponer el primer elemento del menu) */
+    cursor: pointer;
+}
+
+.menu-toggle:focus {
+    outline: none;
+}
+
+/* Fondo semitransparente para el overlay */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(var(--color-overlay), 0.6); /* Fondo oscuro semitransparente */
+    z-index: 10; /* Justo debajo del menú */
+}
+
+/* Mostrar siempre el menú en pantallas grandes (lg) */
+@media (min-width: 992px) {
+    .menu-toggle {
+        display: none;
+    }
+
+    .component-sidebar {
+        transform: translateX(0);
+        position: relative;
+        width: 250px; /* Siempre visible en pantallas grandes */
+        height: auto;
+        box-shadow: none;
+    }
+
+    .menu-overlay {
+        display: none;
+    }
 }

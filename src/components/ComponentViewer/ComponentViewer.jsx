@@ -23,7 +23,7 @@ export const ComponentViewer = ({ components }) => {
   };
 
   return (
-    <div className="viewer-container d-flex flex-column flex-xl-row">
+    <div className="viewer-container d-flex flex-column flex-lg-row">
       {/* Aside separado en su propio componente */}
       <NavbarComponent
         components={components}
@@ -31,7 +31,7 @@ export const ComponentViewer = ({ components }) => {
         setActiveComponent={setActiveComponent}
       />
 
-      <div className="component-display container-fluid py-3 gap-5 d-flex flex-column flex-lg-row bg-warning">
+      <div className="component-display container-fluid py-5 gap-5 d-flex flex-column flex-lg-row">
         <div className="component-show w-100 d-flex flex-column align-items-center">
           <h2>{activeComponent.name}</h2>
           <div className="component-result">{activeComponent.component}</div>
