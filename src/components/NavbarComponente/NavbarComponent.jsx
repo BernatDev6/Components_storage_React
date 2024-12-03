@@ -18,18 +18,21 @@ export const NavbarComponent = ({ components, activeComponent, setActiveComponen
     };
 
     return (
-        <aside className="component-sidebar">
+        <aside className="component-sidebar p-3 d-xl-block d-flex">
             {Object.keys(components).map((section) => (
-                <div key={section} className="section">
+                <div key={section}>
                     <button
-                        className="aside-section-title"
+                        className="section-button"
                         onClick={() => toggleSection(section)}
                     >
-                        <i className={components[section].icon}></i> <span>{section}</span>{' '}
-                        <i className="fa-solid fa-angle-down"></i>
+                        <span>
+                            <i className={components[section].icon}>
+                            </i> <span>{section}</span>{' '}
+                            <i className="fa-solid fa-angle-down"></i>
+                        </span>
                     </button>
                     {openSections[section] && (
-                        <div className="component-items">
+                        <div className="d-flex flex-column">
                             {components[section].items.map((comp, index) => (
                                 <button
                                     key={index}

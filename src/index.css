@@ -1,21 +1,28 @@
+:root {
+  /* Colores */
+  --primary-color: #8ec7fc; /* Color principal */
+  --primary-text-color: #e0e0e0; /* Texto principal */
+  --color-bg-primary: #121212; /* Fondo principal */
+  --color-bg-secondary: #2c2c2c; /* Fondo secundario */
+  --color-overlay: 20, 20, 20; /* Fondo terciario */
+
+  /* Tipografía */
+  --font-size-small: 0.875rem; /* 14px */
+  --font-size-medium: 1rem; /* 16px */
+  --font-size-large: 1.6rem; /* 25.6px */
+
+  /* Espaciados */
+  --space-small: 0.5rem; /* 8px */
+  --space-medium: 1rem; /* 16px */
+  --space-large: 2rem; /* 32px */
+
+  /* Bordes */
+  --border-radius: 8px; /* 8px */
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  height: 100vh;
-  width: 100vw;
   line-height: 1.5;
-}
-
-@media (max-width: 1200px) {
-  body {
-    height: 100%;
-  }
-}
-
-#root {
-  height: 100%;
 }

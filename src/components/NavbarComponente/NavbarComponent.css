@@ -1,0 +1,12 @@
+/* Botones de cada seccion de componentes */
+.section-button {
+    border: none;
+    background: transparent;
+    padding: var(--space-small) var(--space-medium);
+    width: max-content;
+    transition: color .3s ease;
+}
+
+.section-button:hover {
+    color: var(--primary-color);
+}

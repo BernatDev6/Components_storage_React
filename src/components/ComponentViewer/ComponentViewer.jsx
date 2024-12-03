@@ -23,7 +23,7 @@ export const ComponentViewer = ({ components }) => {
   };
 
   return (
-    <div className="viewer-container">
+    <div className="viewer-container d-flex flex-column flex-xl-row">
       {/* Aside separado en su propio componente */}
       <NavbarComponent
         components={components}
@@ -31,13 +31,13 @@ export const ComponentViewer = ({ components }) => {
         setActiveComponent={setActiveComponent}
       />
 
-      <div className="component-display">
-        <div className="component-show">
+      <div className="component-display container-fluid py-3 gap-5 d-flex flex-column flex-lg-row bg-warning">
+        <div className="component-show w-100 d-flex flex-column align-items-center">
           <h2>{activeComponent.name}</h2>
           <div className="component-result">{activeComponent.component}</div>
         </div>
 
-        <div className="code-tabs">
+        <div className="code-tabs w-100">
           <div className="tabs">
             <button
               className={`tab ${activeComponent.activeTab === 'jsx' ? 'active' : ''}`}
