@@ -4,49 +4,41 @@ import './CardComp1.css'
 export const CardComp1 = () => {
   return (
     <>
-        <a href="#" className="card1">
-            <div>
-                <div className="image-wrapper">
-                    <img src="https://picsum.photos/500" className="card-image" alt="Card image" />
-                </div>
-                <div className="card-info">
-                    <a href="#">Crd title</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus. Quod quae saepe nihil dolorem quam accusamus aut vel similique optio?</p>
-                </div>
+        <div className="card1">
+            <div className="image-wrapper">
+                <img src="https://picsum.photos/500" className="card-image" alt="Card image" />
+            </div>
+            <div className="card-info">
+                <a href="#">Card title</a>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus. Quod quae saepe nihil dolorem quam accusamus aut vel similique optio?</p>
             </div>
             <div className="card-button">
                 <button>
                     Click
                 </button>
             </div>
-        </a>
+        </div>
     </>
   );
 };
 
 export const CardComp1JSX = `
-export const CardComp1 = () => {
-  return (
-    <>
-        <a href="#" className="card1">
-            <div>
-                <div className="image-wrapper">
-                    <img src="https://picsum.photos/500" className="card-image" alt="Card image" />
-                </div>
-                <div className="card-info">
-                    <a href="#">Crd title</a>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus. Quod quae saepe nihil dolorem quam accusamus aut vel similique optio?</p>
-                </div>
-            </div>
-            <div className="card-button">
-                <button>
-                    Click
-                </button>
-            </div>
-        </a>
-    </>
-  );
-};
+<>
+    <div className="card1">
+        <div className="image-wrapper">
+            <img src="https://picsum.photos/500" className="card-image" alt="Card image" />
+        </div>
+        <div className="card-info">
+            <a href="#">Card title</a>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus. Quod quae saepe nihil dolorem quam accusamus aut vel similique optio?</p>
+        </div>
+        <div className="card-button">
+            <button>
+                Click
+            </button>
+        </div>
+    </div>
+</>
 `;
 
 export const CardComp1CSS = `

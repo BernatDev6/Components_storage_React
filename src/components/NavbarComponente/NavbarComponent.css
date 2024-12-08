@@ -1,22 +1,19 @@
 /* Botones de cada seccion de componentes */
 .section-button, .component-button {
+    width: 100%;
+    text-align: left;
     color: var(--primary-text-color);
     border: none;
     border-radius: var(--border-radius);
     background: transparent;
     padding: var(--space-small) var(--space-medium);
-    width: max-content;
     transition: color .3s ease;
 }
 
 .section-button:hover, .component-button:hover {
     color: var(--primary-color);
-}
-
-.section-button:hover {
     background-color: var(--color-bg-primary);
 }
-
 
 /* Contenedor del menú de componentes */
 .component-sidebar {

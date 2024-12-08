@@ -10,13 +10,9 @@ export const ButtonComp2 = () => {
 };
 
 export const ButtonComp2JSX = `
-export const ButtonComp2 = () => {
-  return (
-    <button className="button2">
-      Hover Me!
-    </button>
-  );
-};
+<button className="button2">
+  Hover Me!
+</button>
 `;
 
 export const ButtonComp2CSS = `

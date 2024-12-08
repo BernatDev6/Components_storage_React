@@ -5,6 +5,8 @@ import { ButtonComp2, ButtonComp2JSX, ButtonComp2CSS } from './components/button
 import { ButtonComp3, ButtonComp3JSX, ButtonComp3CSS } from './components/buttons/button3/ButtonComp3';
 import { CardComp1, CardComp1JSX, CardComp1CSS } from './components/cards/card1/CardComp1';
 import { CardComp2, CardComp2JSX, CardComp2CSS } from './components/cards/card2/CardComp2';
+import { InputComp1, InputComp1JSX, InputComp1CSS } from './components/inputs/input1/InputComp1';
+import { InputComp2, InputComp2JSX, InputComp2CSS } from './components/inputs/input2/InputComp2';
 
 const App = () => {
   const components = {
@@ -35,7 +37,7 @@ const App = () => {
       ]
     },
     Cards: {
-      icon: 'fa-regular fa-hard-drive',
+      icon: 'fa-regular fa-file',
       items: [
         {
           name: 'Card1',
@@ -55,7 +57,22 @@ const App = () => {
     },    
     Inputs: {
       icon: 'fa-solid fa-pen',
-      items: []
+      items: [
+        {
+          name: 'Input1',
+          component: <InputComp1 />,
+          jsxCode: InputComp1JSX,
+          cssCode: InputComp1CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Input2',
+          component: <InputComp2 />,
+          jsxCode: InputComp2JSX,
+          cssCode: InputComp2CSS,
+          activeTab: 'jsx',
+        },
+      ]
     },
     Loaders: {
       icon: 'fa-solid fa-spinner',

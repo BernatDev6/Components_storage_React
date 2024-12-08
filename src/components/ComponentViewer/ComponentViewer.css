@@ -5,6 +5,33 @@
   color: var(--primary-text-color);
 }
 
+/* Botonse para escojer el codigo a ver */
+.tab {
+  border: none;
+  padding: var(--space-small) var(--space-medium);
+  background-color: transparent;
+  color: var(--primary-text-color);
+}
+
+.tab.active {
+  border-bottom: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+/* Icono para copiar el codigo */
+.copy-btn {
+  align-self: flex-end;
+  color: var(--primary-text-color);
+  border: none;
+  background-color: transparent;
+  padding: var(--space-small);
+  transition: color .3s ease;
+}
+
+.copy-btn:hover {
+  color: var(--primary-color);
+}
+
 
 /* Contenedor donde se ve el codigo */
 .pre-content {
@@ -20,7 +47,7 @@
   margin: 0;
   background-color: var(--color-bg-secondary);
   color: var(--primary-text-color);
-  padding: var(--space-small) var(--space-medium);
+  padding: 0 var(--space-medium) var(--space-medium) var(--space-medium);
   border-radius: var(--border-radius);
   position: relative;
   cursor: pointer;

@@ -4,14 +4,14 @@ import './CardComp2.css'
 export const CardComp2 = () => {
   return (
     <>
-        <div class="card2">
-            <div class="flip-card-inner">
-                <div class="front-card">
-                    <p class="title-card">FLIP CARD</p>
+        <div className="card2">
+            <div className="flip-card-inner">
+                <div className="front-card">
+                    <p className="title-card">FLIP CARD</p>
                     <p>👀 Hover to see more! 👀</p>
                 </div>
-                <div class="back-card">
-                    <p class="title-card">BACK FACE</p>
+                <div className="back-card">
+                    <p className="title-card">BACK FACE</p>
                     <p>🚫 Leave Me 🚫</p>
                 </div>
             </div>
@@ -21,24 +21,20 @@ export const CardComp2 = () => {
 };
 
 export const CardComp2JSX = `
-export const CardComp2 = () => {
-  return (
-    <>
-        <div class="card2">
-            <div class="flip-card-inner">
-                <div class="front-card">
-                    <p class="title-card">FLIP CARD</p>
-                    <p>👀 Hover to see more! 👀</p>
-                </div>
-                <div class="back-card">
-                    <p class="title-card">BACK FACE</p>
-                    <p>🚫 Leave Me 🚫</p>
-                </div>
+<>
+    <div className="card2">
+        <div className="flip-card-inner">
+            <div className="front-card">
+                <p className="title-card">FLIP CARD</p>
+                <p>👀 Hover to see more! 👀</p>
+            </div>
+            <div className="back-card">
+                <p className="title-card">BACK FACE</p>
+                <p>🚫 Leave Me 🚫</p>
             </div>
         </div>
-    </>
-  );
-};
+    </div>
+</>
 `;
 
 export const CardComp2CSS = `

@@ -44,17 +44,17 @@ export const NavbarComponent = ({ components, activeComponent, setActiveComponen
                 {Object.keys(components).map((section) => (
                     <div key={section}>
                         <button
-                            className="section-button p-3 mx-3"
+                            className="section-button p-3"
                             onClick={() => toggleSection(section)}
                         >
                             <span>
-                                <i className={components[section].icon}></i>{' '}
-                                <span>{section}</span>{' '}
+                                <i className={components[section].icon}></i>
+                                <span className='px-2'>{section}</span>
                                 <i className="fa-solid fa-angle-down"></i>
                             </span>
                         </button>
                         {openSections[section] && (
-                            <div className="d-flex flex-column">
+                            <div className="expanded-section d-flex flex-column">
                                 {components[section].items.map((comp, index) => (
                                     <button
                                         key={index}

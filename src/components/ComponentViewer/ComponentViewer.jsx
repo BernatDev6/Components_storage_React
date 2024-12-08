@@ -31,10 +31,10 @@ export const ComponentViewer = ({ components }) => {
         setActiveComponent={setActiveComponent}
       />
 
-      <div className="component-display container-fluid py-5 gap-5 d-flex flex-column flex-lg-row">
+      <div className="component-display container-fluid py-5 px-4 gap-5 d-flex flex-column flex-lg-row">
         <div className="component-show w-100 d-flex flex-column align-items-center">
           <h2>{activeComponent.name}</h2>
-          <div className="component-result">{activeComponent.component}</div>
+          <div className="component-result mt-5">{activeComponent.component}</div>
         </div>
 
         <div className="code-tabs w-100">
@@ -45,7 +45,7 @@ export const ComponentViewer = ({ components }) => {
                 setActiveComponent({ ...activeComponent, activeTab: 'jsx' })
               }
             >
-              React Code
+              JSX
             </button>
             <button
               className={`tab ${activeComponent.activeTab === 'css' ? 'active' : ''}`}
@@ -53,10 +53,10 @@ export const ComponentViewer = ({ components }) => {
                 setActiveComponent({ ...activeComponent, activeTab: 'css' })
               }
             >
-              CSS Code
+              CSS
             </button>
           </div>
-          <div className="tab-content">
+          <div className="d-flex flex-column">
             <button
               className="copy-btn"
               onClick={() =>
