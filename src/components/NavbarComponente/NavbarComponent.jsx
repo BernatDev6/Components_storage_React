@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router";
 import './NavbarComponent.css';
 
 export const NavbarComponent = ({ components, activeComponent, setActiveComponent }) => {
@@ -29,18 +30,20 @@ export const NavbarComponent = ({ components, activeComponent, setActiveComponen
 
     return (
         <>
+            
             {/* Botón del menú hamburguesa */}
-            <button 
-                className="menu-toggle d-xl-none text-end pe-3" 
-                onClick={toggleMenu}
+            <div 
+                className="menu-toggle d-xl-none py-2 px-3" 
             >
-                <i className={`fa-solid ${isMenuOpen ? 'fa-times' : 'fa-bars'}`}></i>
-            </button>
+                <Link to="/" className='section-back-link d-xl-none'><i className="fa-solid fa-angles-left"></i> Go back</Link>
+                <i className= {`hamburguer fa-solid ${isMenuOpen ? 'fa-times' : 'fa-bars'}`} onClick={toggleMenu}></i>
+            </div>
 
             {/* Menú lateral */}
             <aside 
                 className={`component-sidebar p-3 ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}
             >
+                <Link to="/" className='section-back-link'><i className="fa-solid fa-angles-left"></i> Go back</Link>
                 {Object.keys(components).map((section) => (
                     <div key={section}>
                         <button

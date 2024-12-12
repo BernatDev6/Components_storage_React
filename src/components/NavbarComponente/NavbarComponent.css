@@ -1,3 +1,15 @@
+/* Boton para volver a home */
+.section-back-link {
+    color: var(--primary-text-color);
+    text-decoration: none;
+    transition: color .3s ease;
+    font-size: var(--font-size-medium);
+}
+
+.section-back-link:hover {
+    color: var(--primary-color);
+}
+
 /* Botones de cada seccion de componentes */
 .section-button, .component-button {
     width: 100%;
@@ -37,20 +49,25 @@
     transform: translateX(-100%); /* Oculta el menú fuera de la pantalla */
 }
 
-/* Botón del menú hamburguesa */
+/* Barra del menu responsive */
 .menu-toggle {
     background-color: var(--color-bg-secondary);
     position: fixed;
     width: 100%;
     border: none;
     color: var(--primary-text-color);
-    font-size: 1.5rem;
     z-index: 20; /* Por debajo del menú (para no sobreponer el primer elemento del menu) */
     cursor: pointer;
 }
 
 .menu-toggle:focus {
     outline: none;
+}
+
+.menu-toggle .hamburguer {
+    position: absolute;
+    right: var(--space-medium);
+    font-size: 1.5rem;
 }
 
 /* Fondo semitransparente para el overlay */

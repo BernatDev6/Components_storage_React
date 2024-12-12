@@ -6,11 +6,13 @@ export const CardComp1 = () => {
     <>
         <div className="card1">
             <div className="image-wrapper">
-                <img src="https://picsum.photos/500" className="card-image" alt="Card image" />
+                <img src="https://picsum.photos/300" className="card-image" alt="Card image" />
             </div>
             <div className="card-info">
                 <a href="#">Card title</a>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus. Quod quae saepe nihil dolorem quam accusamus aut vel similique optio?</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus.
+                </p>
             </div>
             <div className="card-button">
                 <button>
@@ -26,11 +28,13 @@ export const CardComp1JSX = `
 <>
     <div className="card1">
         <div className="image-wrapper">
-            <img src="https://picsum.photos/500" className="card-image" alt="Card image" />
+            <img src="https://picsum.photos/300" className="card-image" alt="Card image" />
         </div>
         <div className="card-info">
             <a href="#">Card title</a>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus. Quod quae saepe nihil dolorem quam accusamus aut vel similique optio?</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus.
+            </p>
         </div>
         <div className="card-button">
             <button>
@@ -49,7 +53,7 @@ export const CardComp1CSS = `
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
     text-align: left;
     cursor: pointer;
-    width: 300px;
+    width: 260px;
     color: #070707;
     text-decoration: none;
     display: flex;
@@ -62,7 +66,7 @@ export const CardComp1CSS = `
     overflow: hidden;
     border-radius: 8px;
     width: 100%;
-    height: 300px;
+    height: 240px;
     display: flex;
     justify-content: center;
     align-items: center;
