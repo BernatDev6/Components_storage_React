@@ -1,15 +1,3 @@
-/* Boton para volver a home */
-.section-back-link {
-    color: var(--primary-text-color);
-    text-decoration: none;
-    transition: color .3s ease;
-    font-size: var(--font-size-medium);
-}
-
-.section-back-link:hover {
-    color: var(--primary-color);
-}
-
 /* Botones de cada seccion de componentes */
 .section-button, .component-button {
     width: 100%;
@@ -54,6 +42,7 @@
     background-color: var(--color-bg-secondary);
     position: fixed;
     width: 100%;
+    text-align: end;
     border: none;
     color: var(--primary-text-color);
     z-index: 20; /* Por debajo del menú (para no sobreponer el primer elemento del menu) */
@@ -64,9 +53,8 @@
     outline: none;
 }
 
-.menu-toggle .hamburguer {
-    position: absolute;
-    right: var(--space-medium);
+.hamburguer {
+    text-align: left;
     font-size: 1.5rem;
 }
 

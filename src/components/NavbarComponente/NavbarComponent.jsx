@@ -35,7 +35,6 @@ export const NavbarComponent = ({ components, activeComponent, setActiveComponen
             <div 
                 className="menu-toggle d-xl-none py-2 px-3" 
             >
-                <Link to="/" className='section-back-link d-xl-none'><i className="fa-solid fa-angles-left"></i> Go back</Link>
                 <i className= {`hamburguer fa-solid ${isMenuOpen ? 'fa-times' : 'fa-bars'}`} onClick={toggleMenu}></i>
             </div>
 
@@ -43,7 +42,6 @@ export const NavbarComponent = ({ components, activeComponent, setActiveComponen
             <aside 
                 className={`component-sidebar p-3 ${isMenuOpen ? 'menu-open' : 'menu-closed'}`}
             >
-                <Link to="/" className='section-back-link'><i className="fa-solid fa-angles-left"></i> Go back</Link>
                 {Object.keys(components).map((section) => (
                     <div key={section}>
                         <button
