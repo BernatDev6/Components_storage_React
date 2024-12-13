@@ -15,14 +15,18 @@ export const LoaderComp2 = () => {
 };
 
 export const LoaderComp2JSX = `
-<>
-    <div className="loader2">
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
-        <div className="circle"></div>
-    </div>
-</>
+export const LoaderComp2 = () => {
+  return (
+    <>
+        <div className="loader2">
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+            <div className="circle"></div>
+        </div>
+    </>
+  );
+};
 `;
 
 export const LoaderComp2CSS = `

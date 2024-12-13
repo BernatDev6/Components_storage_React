@@ -25,24 +25,28 @@ export const CardComp1 = () => {
 };
 
 export const CardComp1JSX = `
-<>
-    <div className="card1">
-        <div className="image-wrapper">
-            <img src="https://picsum.photos/300" className="card-image" alt="Card image" />
+export const CardComp1 = () => {
+  return (
+    <>
+        <div className="card1">
+            <div className="image-wrapper">
+                <img src="https://picsum.photos/300" className="card-image" alt="Card image" />
+            </div>
+            <div className="card-info">
+                <a href="#">Card title</a>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus.
+                </p>
+            </div>
+            <div className="card-button">
+                <button>
+                    Click
+                </button>
+            </div>
         </div>
-        <div className="card-info">
-            <a href="#">Card title</a>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Et quisquam fuga distinctio placeat id esse sunt neque, dolore doloribus.
-            </p>
-        </div>
-        <div className="card-button">
-            <button>
-                Click
-            </button>
-        </div>
-    </div>
-</>
+    </>
+  );
+};
 `;
 
 export const CardComp1CSS = `

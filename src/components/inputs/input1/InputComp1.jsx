@@ -13,12 +13,16 @@ export const InputComp1 = () => {
 };
 
 export const InputComp1JSX = `
-<>
-  <div className="input1">
-      <input type="input" className="input-field" placeholder="Name" />
-      <label htmlFor="name" className="input-label">Name</label>
-  </div>
-</>
+export const InputComp1 = () => {
+  return (
+    <>
+      <div className="input1">
+          <input type="input" className="input-field" placeholder="Name" />
+          <label htmlFor="name" className="input-label">Name</label>
+      </div>
+    </>
+  );
+};
 `;
 
 export const InputComp1CSS = `

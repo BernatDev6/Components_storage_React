@@ -4,6 +4,7 @@ import { ButtonComp2, ButtonComp2JSX, ButtonComp2CSS } from './components/button
 import { ButtonComp3, ButtonComp3JSX, ButtonComp3CSS } from './components/buttons/button3/ButtonComp3';
 import { CardComp1, CardComp1JSX, CardComp1CSS } from './components/cards/card1/CardComp1';
 import { CardComp2, CardComp2JSX, CardComp2CSS } from './components/cards/card2/CardComp2';
+import { CardComp3, CardComp3JSX, CardComp3CSS } from './components/cards/card3/CardComp3';
 import { InputComp1, InputComp1JSX, InputComp1CSS } from './components/inputs/input1/InputComp1';
 import { InputComp2, InputComp2JSX, InputComp2CSS } from './components/inputs/input2/InputComp2';
 import { InputComp3, InputComp3JSX, InputComp3CSS } from './components/inputs/input3/InputComp3';
@@ -54,6 +55,13 @@ const App = () => {
           component: <CardComp2 />,
           jsxCode: CardComp2JSX,
           cssCode: CardComp2CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Card3',
+          component: <CardComp3 />,
+          jsxCode: CardComp3JSX,
+          cssCode: CardComp3CSS,
           activeTab: 'jsx',
         },
       ],

@@ -21,20 +21,24 @@ export const InputComp2 = () => {
 };
 
 export const InputComp2JSX = `
-<>
-  <div className="input2">
-    <input type="radio" value="5" />
-    <label htmlFor="star5"></label>
-    <input type="radio" value="4" />
-    <label htmlFor="star4"></label>
-    <input type="radio" value="3" />
-    <label htmlFor="star3"></label>
-    <input type="radio" value="2" />
-    <label htmlFor="star2"></label>
-    <input type="radio" value="1" />
-    <label htmlFor="star1"></label>
-  </div>
-</>
+export const InputComp2 = () => {
+  return (
+    <>
+      <div className="input2">
+        <input type="radio" value="5" />
+        <label htmlFor="star5"></label>
+        <input type="radio" value="4" />
+        <label htmlFor="star4"></label>
+        <input type="radio" value="3" />
+        <label htmlFor="star3"></label>
+        <input type="radio" value="2" />
+        <label htmlFor="star2"></label>
+        <input type="radio" value="1" />
+        <label htmlFor="star1"></label>
+      </div>
+    </>
+  );
+};
 `;
 
 export const InputComp2CSS = `

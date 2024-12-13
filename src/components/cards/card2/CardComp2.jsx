@@ -21,20 +21,24 @@ export const CardComp2 = () => {
 };
 
 export const CardComp2JSX = `
-<>
-    <div className="card2">
-        <div className="flip-card-inner">
-            <div className="front-card">
-                <p className="title-card">FLIP CARD</p>
-                <p>👀 Hover to see more! 👀</p>
-            </div>
-            <div className="back-card">
-                <p className="title-card">BACK FACE</p>
-                <p>🚫 Leave Me 🚫</p>
+export const CardComp2 = () => {
+  return (
+    <>
+        <div className="card2">
+            <div className="flip-card-inner">
+                <div className="front-card">
+                    <p className="title-card">FLIP CARD</p>
+                    <p>👀 Hover to see more! 👀</p>
+                </div>
+                <div className="back-card">
+                    <p className="title-card">BACK FACE</p>
+                    <p>🚫 Leave Me 🚫</p>
+                </div>
             </div>
         </div>
-    </div>
-</>
+    </>
+  );
+};
 `;
 
 export const CardComp2CSS = `

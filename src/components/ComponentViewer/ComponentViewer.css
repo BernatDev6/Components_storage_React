@@ -21,6 +21,11 @@
   color: var(--primary-color);
 }
 
+/* Donde se muestra el componente */
+.component-result {
+  max-width: 400px;
+}
+
 /* Botonse para escojer el codigo a ver */
 .tab {
   border: none;

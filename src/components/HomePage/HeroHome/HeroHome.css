@@ -1,0 +1,52 @@
+/* Hero section */
+.hero {
+    min-height: 80vh;
+  }
+  
+  /* Texto de la hero section */
+  .hero__text {
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: var(--border-radius);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 24px;
+  }
+  
+  /* Boton de la hero section */
+  .hero__button {
+      width: fit-content;
+      overflow: hidden;
+      text-decoration: none;
+      background-color: var(--color-bg-primary);
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+      padding: 0.75rem 1.5rem;
+      position: relative;
+      border-radius: 4px;
+      transition: color 0.5s;
+      z-index: 1;
+  }
+  
+  .hero__button:hover {
+      color: var(--color-bg-primary);
+  }
+  
+  .hero__button::before {
+      content: "";
+      height: 110%;
+      background-color: var(--primary-color);
+      transform: skewX(-35deg);
+      transition: width 0.5s;
+      position: absolute;
+      left: -30%;
+      top: -4%;
+      width: 0%;
+      z-index: -1;
+  }
+  
+  .hero__button:hover::before {
+      width: 150%;
+  }
