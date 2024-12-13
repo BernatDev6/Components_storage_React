@@ -8,32 +8,32 @@ import programmingImg from '../../../assets/images/programming.webp'
 
 export const BentoHome = () => {
   return (
-    <section class="container bento">
-        <div class="div1 group">1. React components
+    <section className="container bento">
+        <div className="div1 group">1. React components
 
         </div>
-        <div class="div2 group"> 
+        <div className="div2 group"> 
             <CardComp3 />
         </div>
-        <div class="div3 group">3 
+        <div className="div3 group">3 
 
         </div>
-        <div class="div4 group">
+        <div className="div4 group">
             <img src={programmingImg} alt="" className='w-100'/>
         </div>
-        <div class="div5 group"> 
+        <div className="div5 group"> 
             <InputComp1 />
         </div>
-        <div class="div6 group"> 
+        <div className="div6 group"> 
             <InputComp2 />
         </div>
-        <div class="div7 group">7 
+        <div className="div7 group">7 
 
         </div>
-        <div class="div8 group">8 
+        <div className="div8 group">8 
 
         </div>
-        <div class="div9 group">
+        <div className="div9 group">
             <CardComp2 />
         </div>
     </section>
