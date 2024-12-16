@@ -5,15 +5,15 @@ export const InputComp2 = () => {
   return (
     <>
       <div className="input2">
-        <input type="radio" value="5" />
+        <input id='star5' type="radio" value="5" name='rating' />
         <label htmlFor="star5"></label>
-        <input type="radio" value="4" />
+        <input id='star4' type="radio" value="4" name='rating' />
         <label htmlFor="star4"></label>
-        <input type="radio" value="3" />
+        <input id='star3' type="radio" value="3" name='rating' />
         <label htmlFor="star3"></label>
-        <input type="radio" value="2" />
+        <input id='star2' type="radio" value="2" name='rating' />
         <label htmlFor="star2"></label>
-        <input type="radio" value="1" />
+        <input id='star1' type="radio" value="1" name='rating' />
         <label htmlFor="star1"></label>
       </div>
     </>
@@ -25,15 +25,15 @@ export const InputComp2 = () => {
   return (
     <>
       <div className="input2">
-        <input type="radio" value="5" />
+        <input id='star5' type="radio" value="5" name='rating' />
         <label htmlFor="star5"></label>
-        <input type="radio" value="4" />
+        <input id='star4' type="radio" value="4" name='rating' />
         <label htmlFor="star4"></label>
-        <input type="radio" value="3" />
+        <input id='star3' type="radio" value="3" name='rating' />
         <label htmlFor="star3"></label>
-        <input type="radio" value="2" />
+        <input id='star2' type="radio" value="2" name='rating' />
         <label htmlFor="star2"></label>
-        <input type="radio" value="1" />
+        <input id='star1' type="radio" value="1" name='rating' />
         <label htmlFor="star1"></label>
       </div>
     </>

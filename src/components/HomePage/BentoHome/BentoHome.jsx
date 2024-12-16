@@ -19,21 +19,15 @@ export const BentoHome = () => {
 
         </div>
         <div className="div4 group">
-            <img src={programmingImg} alt="" className='w-100'/>
-        </div>
-        <div className="div5 group"> 
             <InputComp1 />
         </div>
-        <div className="div6 group"> 
+        <div className="div5 group"> 
             <InputComp2 />
         </div>
-        <div className="div7 group">7 
+        <div className="div6 group">
 
         </div>
-        <div className="div8 group">8 
-
-        </div>
-        <div className="div9 group">
+        <div className="div7 group"> 
             <CardComp2 />
         </div>
     </section>
