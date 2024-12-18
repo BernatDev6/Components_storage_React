@@ -1,0 +1,55 @@
+.button5 {
+  position: relative;
+  width: 160px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border: 2px solid #323232;
+  background-color: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.button5, .button5__icon, .button5__text {
+  transition: all 0.3s;
+}
+
+.button5 .button5__text {
+  transform: translateX(14px);
+  color: #a00000;
+  font-weight: 600;
+}
+
+.button5 .button5__icon {
+  position: absolute;
+  transform: translateX(109px);
+  height: 100%;
+  width: 42px;
+  background-color: #a00000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button5 .button5__svg {
+  width: 20px;
+  fill: #eee;
+}
+
+.button5:hover {
+  background: #eee;
+}
+
+.button5:hover .button5__text {
+  color: transparent;
+}
+
+.button5:hover .button5__icon {
+  width: 160px;
+  transform: translateX(-7px);
+}
+
+.button5:active {
+  transform: scale(0.95);
+}

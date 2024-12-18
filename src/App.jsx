@@ -2,6 +2,8 @@ import React from 'react';
 import { ButtonComp1, ButtonComp1JSX, ButtonComp1CSS } from './components/buttons/button1/ButtonComp1';
 import { ButtonComp2, ButtonComp2JSX, ButtonComp2CSS } from './components/buttons/button2/ButtonComp2';
 import { ButtonComp3, ButtonComp3JSX, ButtonComp3CSS } from './components/buttons/button3/ButtonComp3';
+import { ButtonComp4, ButtonComp4JSX, ButtonComp4CSS } from './components/buttons/button4/ButtonComp4';
+import { ButtonComp5, ButtonComp5JSX, ButtonComp5CSS } from './components/buttons/button5/ButtonComp5';
 import { CardComp1, CardComp1JSX, CardComp1CSS } from './components/cards/card1/CardComp1';
 import { CardComp2, CardComp2JSX, CardComp2CSS } from './components/cards/card2/CardComp2';
 import { CardComp3, CardComp3JSX, CardComp3CSS } from './components/cards/card3/CardComp3';
@@ -38,6 +40,20 @@ const App = () => {
           component: <ButtonComp3 />,
           jsxCode: ButtonComp3JSX,
           cssCode: ButtonComp3CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Button4',
+          component: <ButtonComp4 />,
+          jsxCode: ButtonComp4JSX,
+          cssCode: ButtonComp4CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Button5',
+          component: <ButtonComp5 />,
+          jsxCode: ButtonComp5JSX,
+          cssCode: ButtonComp5CSS,
           activeTab: 'jsx',
         },
       ]
