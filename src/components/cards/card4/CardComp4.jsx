@@ -35,6 +35,7 @@ export const CardComp4 = () => {
 
 export const CardComp4CSS = `
 .card4 {
+    max-width: 600px;
     border: 1px solid #fff;
     border-radius: 8px;
     padding: 20px;

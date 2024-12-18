@@ -53,7 +53,7 @@ export const InputComp2CSS = `
 
 .input2 label {
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color .3s, transform .3s;
 }
 
 .input2 label:before {
@@ -65,6 +65,7 @@ export const InputComp2CSS = `
 .input2 label:hover,
 .input2 label:hover ~ label {
   color: #ffbc2a;
+  transform: scale(1.1);
   transition: color 0.3s;
 }
 `;

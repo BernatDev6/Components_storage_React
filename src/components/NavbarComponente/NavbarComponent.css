@@ -29,6 +29,61 @@
     box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Componentes de cada seccion */
+.component-button {
+    opacity: 0;
+    transform: translateX(-10px); /* Se mueve hacia abajo al inicio */
+    animation: fadeInRight 0.3s ease forwards; /* La animación dura 0.3s */
+}
+
+/* Contenedor de la seccion expandida, donde se ven los componentes */
+.expanded-section {
+    max-height: 160px;
+    overflow-y: auto;
+    position: relative; /* Necesario para aplicar una máscara interna */
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.6); /* Sombra interna */
+    border-radius: var(--border-radius); /* Asegura bordes redondeados si es necesario */
+}
+
+/* Barra de scroll en caso de aparecer */
+.expanded-section::-webkit-scrollbar {
+    width: 8px; /* Ancho del scrollbar */
+    height: 8px; /* Altura del scrollbar horizontal (si hay) */
+}
+
+/* Estilo del fondo del scrollbar */
+.expanded-section::-webkit-scrollbar-track {
+    background-color: var(--color-bg-secondary-light); /* Fondo del track (parte donde se mueve el pulgar) */
+    border-radius: var(--border-radius);
+}
+
+/* Estilo del pulgar (la parte que se mueve) */
+.expanded-section::-webkit-scrollbar-thumb {
+    background-color: var(--primary-text-color); /* Color del pulgar */
+    border-radius: var(--border-radius);
+    border: 3px solid var(--primary-text-color); /* Borde sutil alrededor del pulgar */
+}
+
+/* Animación para cada componente en cada seccion */
+@keyframes fadeInRight {
+    to {
+        opacity: 1;
+        transform: translateY(0); /* Posición final */
+    }
+}
+
+/* Animacion para la flecha de despliegue de seccion */
+.fa-angle-down.rotated {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.fa-angle-down {
+    transform: rotate(360deg);
+    transition: transform 0.3s ease;
+}
+
+/* Menu responsive mostrar/ocultar*/
 .menu-open {
     transform: translateX(0); /* Desliza el menú hacia adentro */
 }

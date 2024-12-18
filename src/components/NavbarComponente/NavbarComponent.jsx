@@ -13,11 +13,15 @@ export const NavbarComponent = ({ components, activeComponent, setActiveComponen
     const [isMenuOpen, setIsMenuOpen] = React.useState(false); // Estado del menú hamburguesa
 
     const toggleSection = (section) => {
-        setOpenSections((prevSections) => ({
-            ...prevSections,
-            [section]: !prevSections[section],
-        }));
+        setOpenSections((prevSections) => {
+            const newSections = Object.keys(prevSections).reduce((acc, key) => {
+                acc[key] = key === section ? !prevSections[section] : false;
+                return acc;
+            }, {});
+            return newSections;
+        });
     };
+    
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
@@ -29,8 +33,7 @@ export const NavbarComponent = ({ components, activeComponent, setActiveComponen
     };
 
     return (
-        <>
-            
+        <>   
             {/* Botón del menú hamburguesa */}
             <div 
                 className="menu-toggle d-xl-none py-2 px-3" 
@@ -48,10 +51,10 @@ export const NavbarComponent = ({ components, activeComponent, setActiveComponen
                             className="section-button p-3"
                             onClick={() => toggleSection(section)}
                         >
-                            <span>
+                            <span className='section-title'>
                                 <i className={components[section].icon}></i>
                                 <span className='px-2'>{section}</span>
-                                <i className="fa-solid fa-angle-down"></i>
+                                <i className={`fa-solid fa-angle-down ${openSections[section] ? 'rotated' : ''}`}></i>
                             </span>
                         </button>
                         {openSections[section] && (
@@ -62,6 +65,7 @@ export const NavbarComponent = ({ components, activeComponent, setActiveComponen
                                         className={`component-button ${
                                             activeComponent.name === comp.name ? 'active' : ''
                                         }`}
+                                        style={{ animationDelay: `${index * 0.1}s` }}
                                         onClick={() => handleComponentClick(comp)}  // Cerrar el menú al hacer clic en el componente
                                     >
                                        <span>- {comp.name}</span> 

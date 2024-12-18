@@ -1,21 +1,23 @@
 /* Platilla bento con grid */
 .bento {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: var(--space-medium);
     grid-row-gap: var(--space-medium);
     grid-template-areas:
-      "div2   div2   div2   div2  div3"
-      "div7   div1   div1   div1  div3"
-      "div7   div1   div1   div1  div3"
-      "div6   div1   div1   div1  div3"
-      "div6   div5   div5   div4  div4"
+    "div1   div1   div2   div2"
+    "div3   div3   div3   div3"
+    "div3   div3   div3   div3"
+    "div4   div4   div4   div4"
+    "div5   div5   div6   div6"
     ;
 }
 
 .bento .group {
     display: flex;
+    align-items: center;
+    justify-content: center;
     background: rgba(255, 255, 255, 0.2);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -30,54 +32,35 @@
 }
 .div2 { 
     grid-area: div2;
-    align-items: center;
-    justify-content: center;
 }
 .div3 { 
     grid-area: div3;
 }
 .div4 { 
     grid-area: div4;
-    align-items: center;
-    justify-content: center;
 }
 .div5 { 
     grid-area: div5;
-    align-items: center;
-    justify-content: center;
 }
 .div6 { 
     grid-area: div6;
-    align-items: center;
-    justify-content: center;
-}
-.div7 { 
-    grid-area: div7;
-    align-items: center;
-    justify-content: center;
 }
 
-
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .bento {
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(13, 1fr);
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(7, 1fr);
         grid-column-gap: var(--space-medium);
         grid-row-gap: var(--space-medium);
         grid-template-areas:
-          "div2   div2   div2   div2"
-          "div1   div1   div1   div1"
-          "div1   div1   div1   div1"
-          "div1   div1   div1   div1"
-          "div1   div1   div1   div1"
-          "div4   div4   div4   div3"
-          "div4   div4   div4   div3"
-          "div5   div5   div5   div3"
-          "div5   div5   div5   div3"
-          "div6   div6   div6   div6"
-          "div6   div6   div6   div6"
-          "div7   div7   div7   div7"
-          "div7   div7   div7   div7"
+          "div1   div1"
+          "div2   div2"
+          "div3   div3"
+          "div3   div3"
+          "div4   div4"
+          "div5   div5"
+          "div6   div6"
+
 
         ;
     }
