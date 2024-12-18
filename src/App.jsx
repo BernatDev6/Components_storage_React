@@ -11,9 +11,11 @@ import { CardComp4, CardComp4JSX, CardComp4CSS } from './components/cards/card4/
 import { InputComp1, InputComp1JSX, InputComp1CSS } from './components/inputs/input1/InputComp1';
 import { InputComp2, InputComp2JSX, InputComp2CSS } from './components/inputs/input2/InputComp2';
 import { InputComp3, InputComp3JSX, InputComp3CSS } from './components/inputs/input3/InputComp3';
+import { InputComp4, InputComp4JSX, InputComp4CSS } from './components/inputs/input4/InputComp4';
 import { LoaderComp1, LoaderComp1JSX, LoaderComp1CSS } from './components/loaders/loader1/LoaderComp1';
 import { LoaderComp2, LoaderComp2JSX, LoaderComp2CSS } from './components/loaders/loader2/LoaderComp2';
 import { LoaderComp3, LoaderComp3JSX, LoaderComp3CSS } from './components/loaders/loader3/LoaderComp3';
+import { LoaderComp4, LoaderComp4JSX, LoaderComp4CSS } from './components/loaders/loader4/LoaderComp4';
 import { MainRouter } from './routes/MainRouter';
 
 const App = () => {
@@ -115,6 +117,13 @@ const App = () => {
           cssCode: InputComp3CSS,
           activeTab: 'jsx',
         },
+        {
+          name: 'Input4',
+          component: <InputComp4 />,
+          jsxCode: InputComp4JSX,
+          cssCode: InputComp4CSS,
+          activeTab: 'jsx',
+        },
       ]
     },
     Loaders: {
@@ -139,6 +148,13 @@ const App = () => {
           component: <LoaderComp3 />,
           jsxCode: LoaderComp3JSX,
           cssCode: LoaderComp3CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader4',
+          component: <LoaderComp4 />,
+          jsxCode: LoaderComp4JSX,
+          cssCode: LoaderComp4CSS,
           activeTab: 'jsx',
         },
       ]
