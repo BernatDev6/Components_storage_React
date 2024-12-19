@@ -39,7 +39,7 @@ export const ComponentViewer = ({ components }) => {
         <div className='d-flex flex-column flex-lg-row gap-3'>
 
           <div className="component-show w-100 d-flex flex-column align-items-center">
-            <h2>{activeComponent.name}</h2>
+            <h2 className="h2">{activeComponent.name}</h2>
             <div className="component-result mt-5">{activeComponent.component}</div>
           </div>
 

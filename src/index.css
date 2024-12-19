@@ -1,7 +1,7 @@
 :root {
   /* Colores */
   --primary-color: #8ec7fc; /* Color principal */
-  --primary-text-color: #e0e0e0; /* Texto principal */
+  --primary-text-color: #cecece; /* Texto principal */
   --color-bg-primary: #121212; /* Fondo principal */
   --color-bg-secondary: #2c2c2c; /* Fondo secundario */
   --color-overlay: 20, 20, 20; /* Fondo terciario */
