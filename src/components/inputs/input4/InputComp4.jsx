@@ -3,7 +3,7 @@ import './InputComp4.css'
 
 export const InputComp4 = () => {
   return (
-    <div class="input4">
+    <div className="input4">
       <input placeholder="Name..." type="text" />
     </div>
   );
@@ -12,7 +12,7 @@ export const InputComp4 = () => {
 export const InputComp4JSX = `
 export const InputComp4 = () => {
   return (
-    <div class="input4">
+    <div className="input4">
       <input placeholder="Name..." type="text" />
     </div>
   );

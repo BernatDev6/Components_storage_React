@@ -3,13 +3,13 @@ import './CardComp5.css'
 
 export const CardComp5 = () => {
     return (
-        <article class="card5">
-            <img src="https://picsum.photos/500" alt="image" class="card5__img" />
+        <article className="card5">
+            <img src="https://picsum.photos/500" alt="image" className="card5__img" />
 
-            <div class="card5__data">
-                <h2 class="card5__title">Card5 Hover</h2>
+            <div className="card5__data">
+                <h2 className="card5__title">Card5 Hover</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="card5__button">Read More</a>
+                <a href="#" className="card5__button">Read More</a>
             </div>
         </article>
     );
@@ -18,13 +18,13 @@ export const CardComp5 = () => {
 export const CardComp5JSX = `
 export const CardComp5 = () => {
     return (
-        <article class="card5">
-            <img src="https://picsum.photos/500" alt="image" class="card5__img" />
+        <article className="card5">
+            <img src="https://picsum.photos/500" alt="image" className="card5__img" />
 
-            <div class="card5__data">
-                <h2 class="card5__title">Card5 Hover</h2>
+            <div className="card5__data">
+                <h2 className="card5__title">Card5 Hover</h2>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
-                <a href="#" class="card5__button">Read More</a>
+                <a href="#" className="card5__button">Read More</a>
             </div>
         </article>
     );

@@ -3,14 +3,14 @@ import './LoaderComp4.css'
 
 export const LoaderComp4 = () => {
   return (
-    <div class="loader4"></div>
+    <div className="loader4"></div>
   );
 };
 
 export const LoaderComp4JSX = `
 export const LoaderComp4 = () => {
   return (
-    <div class="loader4"></div>
+    <div className="loader4"></div>
   );
 };
 `;

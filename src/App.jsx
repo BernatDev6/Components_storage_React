@@ -10,6 +10,7 @@ import { CardComp3, CardComp3JSX, CardComp3CSS } from './components/cards/card3/
 import { CardComp4, CardComp4JSX, CardComp4CSS } from './components/cards/card4/CardComp4';
 import { CardComp5, CardComp5JSX, CardComp5CSS } from './components/cards/card5/CardComp5';
 import { CardComp6, CardComp6JSX, CardComp6CSS } from './components/cards/card6/CardComp6';
+import { CardComp7, CardComp7JSX, CardComp7CSS } from './components/cards/card7/CardComp7';
 import { InputComp1, InputComp1JSX, InputComp1CSS } from './components/inputs/input1/InputComp1';
 import { InputComp2, InputComp2JSX, InputComp2CSS } from './components/inputs/input2/InputComp2';
 import { InputComp3, InputComp3JSX, InputComp3CSS } from './components/inputs/input3/InputComp3';
@@ -105,6 +106,13 @@ const App = () => {
           component: <CardComp6 />,
           jsxCode: CardComp6JSX,
           cssCode: CardComp6CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Card7',
+          component: <CardComp7 />,
+          jsxCode: CardComp7JSX,
+          cssCode: CardComp7CSS,
           activeTab: 'jsx',
         },
       ],
