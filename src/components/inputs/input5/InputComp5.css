@@ -1,0 +1,64 @@
+.input5__input {
+  display: block;
+  position: relative;
+  outline: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.input5__input::before,
+.input5__input::after {
+  position: absolute;
+  display: inline-block;
+  top: -5px;
+}
+
+.input5__input::before {
+  content: attr(min);
+  left: 0;
+  transform: translateX(calc(-100% - 5px));
+}
+
+.input5__input::after {
+  content: attr(max);
+  right: 0;
+  transform: translateX(calc(100% + 5px));
+}
+
+.input5__input::-webkit-slider-runnable-track {
+  background-color: #ddd;
+  height: 5px;
+  border-radius: 3px;
+  appearance: none;
+}
+
+.input5__input::-webkit-slider-thumb {
+  background-color: #0097f0;
+  width: 6px;
+  height: 20px;
+  border-radius: 3px;
+  appearance: none;
+  margin: -7px 0 0 0;
+}
+
+.input5 {
+  position: relative;
+}
+
+.input5__bubble {
+  background-color: #0097f0;
+  color: #fff;
+  position: absolute;
+  left: 0;
+  top: 18px;
+  padding: 5px 7px;
+  border-radius: 3px;
+  z-index: 999;
+  display: none;
+}
+
+.input5__input:hover+.input5__bubble,
+.input5__input:focus+.input5__bubble {
+  display: inline-block;
+}

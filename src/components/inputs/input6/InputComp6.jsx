@@ -1,0 +1,74 @@
+import './InputComp6.css';
+
+export const InputComp6 = () => {
+  return (
+    <div className="input6">
+        <input className="input6__input" type="text" placeholder="" />
+        <label className='input6__label'>First Name</label>
+        <span className="input6__border-focus"></span>
+    </div>
+  );
+};
+
+
+export const InputComp6JSX = `
+export const InputComp6 = () => {
+  return (
+    <div className="input6">
+        <input className="input6__input" type="text" placeholder="" />
+        <label className='input6__label'>First Name</label>
+        <span className="input6__border-focus"></span>
+    </div>
+  );
+};
+`;
+
+export const InputComp6CSS = `
+.input6 {
+  position: relative;
+  width: 100%;
+}
+
+.input6__input {
+  color: #eee;
+  padding: 8px;
+  background: #ffffff15;
+  border: none;
+  border-bottom: 2px solid #eee;
+}
+
+.input6__label {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  font-size: 12px;
+  pointer-events: none;
+  color: #aaa;
+  transition: 0.4s;
+  z-index: 1;
+}
+
+.input6__input:focus {
+  outline: none;
+}
+
+.input6__border-focus {
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 50%;
+  height: 2px;
+  background-color: #d800a2;
+  transition: 0.4s;
+}
+
+.input6__input:focus ~ .input6__border-focus {
+  width: 100%;
+  transition: 0.4s;
+  left: 0;
+}
+
+.input6__input:focus ~ .input6__label {
+  color: #d800a2;
+}
+`;

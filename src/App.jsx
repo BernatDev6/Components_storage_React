@@ -15,6 +15,11 @@ import { InputComp1, InputComp1JSX, InputComp1CSS } from './components/inputs/in
 import { InputComp2, InputComp2JSX, InputComp2CSS } from './components/inputs/input2/InputComp2';
 import { InputComp3, InputComp3JSX, InputComp3CSS } from './components/inputs/input3/InputComp3';
 import { InputComp4, InputComp4JSX, InputComp4CSS } from './components/inputs/input4/InputComp4';
+import { InputComp5, InputComp5JSX, InputComp5CSS } from './components/inputs/input5/InputComp5';
+import { InputComp6, InputComp6JSX, InputComp6CSS } from './components/inputs/input6/InputComp6';
+import { InputComp7, InputComp7JSX, InputComp7CSS } from './components/inputs/input7/InputComp7';
+import { InputComp8, InputComp8JSX, InputComp8CSS } from './components/inputs/input8/InputComp8';
+import { InputComp9, InputComp9JSX, InputComp9CSS } from './components/inputs/input9/InputComp9';
 import { LoaderComp1, LoaderComp1JSX, LoaderComp1CSS } from './components/loaders/loader1/LoaderComp1';
 import { LoaderComp2, LoaderComp2JSX, LoaderComp2CSS } from './components/loaders/loader2/LoaderComp2';
 import { LoaderComp3, LoaderComp3JSX, LoaderComp3CSS } from './components/loaders/loader3/LoaderComp3';
@@ -146,6 +151,41 @@ const App = () => {
           component: <InputComp4 />,
           jsxCode: InputComp4JSX,
           cssCode: InputComp4CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Input5',
+          component: <InputComp5 />,
+          jsxCode: InputComp5JSX,
+          cssCode: InputComp5CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Input6',
+          component: <InputComp6 />,
+          jsxCode: InputComp6JSX,
+          cssCode: InputComp6CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Input7',
+          component: <InputComp7 />,
+          jsxCode: InputComp7JSX,
+          cssCode: InputComp7CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Input8',
+          component: <InputComp8 />,
+          jsxCode: InputComp8JSX,
+          cssCode: InputComp8CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Input9',
+          component: <InputComp9 />,
+          jsxCode: InputComp9JSX,
+          cssCode: InputComp9CSS,
           activeTab: 'jsx',
         },
       ]
