@@ -2,9 +2,9 @@ import './InputComp9.css';
 
 export const InputComp9 = () => {
   return (
-    <label class="input9">
+    <label className="input9">
         <input type="checkbox" className="input9__input"/>
-        <span class="input9__slider"></span>
+        <span className="input9__slider"></span>
     </label>
   );
 };
@@ -13,9 +13,9 @@ export const InputComp9 = () => {
 export const InputComp9JSX = `
 export const InputComp9 = () => {
   return (
-    <label class="input9">
+    <label className="input9">
         <input type="checkbox" className="input9__input"/>
-        <span class="input9__slider"></span>
+        <span className="input9__slider"></span>
     </label>
   );
 };

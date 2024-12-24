@@ -24,6 +24,9 @@ import { LoaderComp1, LoaderComp1JSX, LoaderComp1CSS } from './components/loader
 import { LoaderComp2, LoaderComp2JSX, LoaderComp2CSS } from './components/loaders/loader2/LoaderComp2';
 import { LoaderComp3, LoaderComp3JSX, LoaderComp3CSS } from './components/loaders/loader3/LoaderComp3';
 import { LoaderComp4, LoaderComp4JSX, LoaderComp4CSS } from './components/loaders/loader4/LoaderComp4';
+import { LoaderComp5, LoaderComp5JSX, LoaderComp5CSS } from './components/loaders/loader5/LoaderComp5';
+import { LoaderComp6, LoaderComp6JSX, LoaderComp6CSS } from './components/loaders/loader6/LoaderComp6';
+import { LoaderComp7, LoaderComp7JSX, LoaderComp7CSS } from './components/loaders/loader7/LoaderComp7';
 import { MainRouter } from './routes/MainRouter';
 
 const App = () => {
@@ -219,6 +222,27 @@ const App = () => {
           component: <LoaderComp4 />,
           jsxCode: LoaderComp4JSX,
           cssCode: LoaderComp4CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader5',
+          component: <LoaderComp5 />,
+          jsxCode: LoaderComp5JSX,
+          cssCode: LoaderComp5CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader6',
+          component: <LoaderComp6 />,
+          jsxCode: LoaderComp6JSX,
+          cssCode: LoaderComp6CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader7',
+          component: <LoaderComp7 />,
+          jsxCode: LoaderComp7JSX,
+          cssCode: LoaderComp7CSS,
           activeTab: 'jsx',
         },
       ]

@@ -1,0 +1,94 @@
+.loader7 {
+    width: 80px;
+    height: 80px;
+    position: relative;
+    transform: rotate(-45deg);
+}
+
+.loader7__box {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(135, 0, 0, 0.6);
+    background: linear-gradient(to right, #12134b, #5676b8, #e9b6a3, #8dd1f8, #587dc7, #c978a2, #f18a57, #f396a2, #b4728b, #12134b, #5676b8);
+    background-position: 0% 50%;
+    background-size: 1000% 1000%;
+    visibility: hidden;
+}
+
+.loader7__box.one {
+    animation: gradient-animation 15s infinite, box1-animation 3.5s infinite;
+}
+
+.loader7__box.two {
+    animation: gradient-animation 15s infinite, box2-animation 3.5s 0.15s infinite;
+}
+
+.loader7__box.three {
+    animation: gradient-animation 15s infinite, box3-animation 3.5s 0.3s infinite;
+}
+
+@keyframes gradient-animation {
+    to {
+        background-position: 100% 50%;
+    }
+}
+  
+@keyframes box1-animation {
+  0% {
+    visibility: visible;
+    clip-path: inset(55% 55% 0% 0% round 5%);
+  }
+  25% {
+    clip-path: inset(0% 55% 55% 0% round 5%);
+  }
+  50% {
+    clip-path: inset(0% 0% 55% 55% round 5%);
+  }
+  75% {
+    clip-path: inset(55% 0% 0% 55% round 5%);
+  }
+  100% {
+    clip-path: inset(55% 55% 0% 0% round 5%);
+  }
+}
+
+@keyframes box2-animation {
+  0% {
+    visibility: visible;
+    clip-path: inset(55% 0% 0% 55% round 5%);
+  }
+  25% {
+    clip-path: inset(55% 55% 0% 0% round 5%);
+  }
+  50% {
+    clip-path: inset(0% 55% 55% 0% round 5%);
+  }
+  75% {
+    clip-path: inset(0% 0% 55% 55% round 5%);
+  }
+  100% {
+    clip-path: inset(55% 0% 0% 55% round 5%);
+  }
+}
+
+@keyframes box3-animation {
+  0% {
+    visibility: visible;
+    clip-path: inset(0% 0% 55% 55% round 5%);
+  }
+  25% {
+    clip-path: inset(55% 0% 0% 55% round 5%);
+  }
+  50% {
+    clip-path: inset(55% 55% 0% 0% round 5%);
+  }
+  75% {
+    clip-path: inset(0% 55% 55% 0% round 5%);
+  }
+  100% {
+    clip-path: inset(0% 0% 55% 55% round 5%);
+  }
+}
