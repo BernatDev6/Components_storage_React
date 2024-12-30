@@ -4,6 +4,9 @@ import { ButtonComp2, ButtonComp2JSX, ButtonComp2CSS } from './components/button
 import { ButtonComp3, ButtonComp3JSX, ButtonComp3CSS } from './components/buttons/button3/ButtonComp3';
 import { ButtonComp4, ButtonComp4JSX, ButtonComp4CSS } from './components/buttons/button4/ButtonComp4';
 import { ButtonComp5, ButtonComp5JSX, ButtonComp5CSS } from './components/buttons/button5/ButtonComp5';
+import { ButtonComp6, ButtonComp6JSX, ButtonComp6CSS } from './components/buttons/button6/ButtonComp6';
+import { ButtonComp7, ButtonComp7JSX, ButtonComp7CSS } from './components/buttons/button7/ButtonComp7';
+import { ButtonComp8, ButtonComp8JSX, ButtonComp8CSS } from './components/buttons/button8/ButtonComp8';
 import { CardComp1, CardComp1JSX, CardComp1CSS } from './components/cards/card1/CardComp1';
 import { CardComp2, CardComp2JSX, CardComp2CSS } from './components/cards/card2/CardComp2';
 import { CardComp3, CardComp3JSX, CardComp3CSS } from './components/cards/card3/CardComp3';
@@ -67,6 +70,27 @@ const App = () => {
           component: <ButtonComp5 />,
           jsxCode: ButtonComp5JSX,
           cssCode: ButtonComp5CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Button6',
+          component: <ButtonComp6 />,
+          jsxCode: ButtonComp6JSX,
+          cssCode: ButtonComp6CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Button7',
+          component: <ButtonComp7 />,
+          jsxCode: ButtonComp7JSX,
+          cssCode: ButtonComp7CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Button8',
+          component: <ButtonComp8 />,
+          jsxCode: ButtonComp8JSX,
+          cssCode: ButtonComp8CSS,
           activeTab: 'jsx',
         },
       ]
