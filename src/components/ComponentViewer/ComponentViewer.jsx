@@ -32,7 +32,7 @@ export const ComponentViewer = ({ components }) => {
         setActiveComponent={setActiveComponent}
       />
 
-      <div className="component-display container-fluid py-lg-3 pt-5 px-lg-4 px-2 gap-3 d-flex flex-column">
+      <div className="component-display container-fluid pb-2 pt-5 pt-lg-3 px-lg-4 px-2 gap-3 d-flex flex-column">
 
         <Link to="/" className='back-link'><i className="fa-solid fa-angles-left"></i> Go back</Link>
         

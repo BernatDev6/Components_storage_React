@@ -1,0 +1,73 @@
+import React from "react";
+import "./ButtonComp9.css";
+
+export const ButtonComp9 = () => {
+  return (
+    <button className="button9">
+      Button
+    </button>
+  );
+};
+
+export const ButtonComp9JSX = `
+export const ButtonComp9 = () => {
+  return (
+    <button className="button9">
+      Button
+    </button>
+  );
+};
+`;
+
+export const ButtonComp9CSS = `
+.button9 {
+  padding: 1em 1.75em;
+  background-color: transparent;
+  border-radius: 6px;
+  border: 1px solid #0095a9;
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+  text-transform: uppercase;
+  color: #0095a9;
+}
+
+.button9::after, .button9::before {
+  content: '';
+  background-color: #0095a9;
+  display: block;
+  height: 100%;
+  width: 100%;
+  transform: skew(90deg) translate(-50%, -50%);
+  position: absolute;
+  inset: 50%;
+  left: 25%;
+  z-index: -1;
+  transition: .5s ease-out;
+}
+
+.button9::before {
+  top: -50%;
+  left: -25%;
+  transform: skew(90deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.button9:hover::before {
+  transform: skew(45deg) rotate(180deg) translate(-50%, -50%);
+}
+
+.button9:hover::after {
+  transform: skew(45deg) translate(-50%, -50%);
+}
+
+.button9:hover {
+  color: #fdfdfd;
+}
+
+.button9:active {
+  filter: brightness(.7);
+  transform: scale(.98);
+}
+`;
