@@ -52,7 +52,7 @@ export const CardComp1 = () => {
 export const CardComp1CSS = `
 .card1 {
     background-color: #eeeeee;
-    padding: 20px;
+    padding: 16px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
     text-align: left;
@@ -82,7 +82,7 @@ export const CardComp1CSS = `
     transition: transform 0.3s ease-in-out;
 }
 
-.card1:hover .card-image {
+.card-image:hover {
     transform: scale(1.2);
 }
 
