@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from "react-router";
 import { NavbarComponent } from '../NavbarComponente/NavbarComponent';
+import { toast, Toaster } from 'sonner';
 import './ComponentViewer.css';
 
 export const ComponentViewer = ({ components }) => {
@@ -19,12 +20,15 @@ export const ComponentViewer = ({ components }) => {
   const copyToClipboard = (code) => {
     navigator.clipboard
       .writeText(code)
-      .then(() => alert('Código copiado al portapapeles!'))
-      .catch((err) => console.error('Error al copiar el código: ', err));
-  };
+      .then(() => toast.success('Código copiado!'))
+      .catch((err) => toast.error('Error al copiar el código'));
+  };  
 
   return (
     <div className="viewer-container d-flex flex-column flex-lg-row">
+      {/* Toaster para notificaciones */}
+      <Toaster position="top-center" richColors/>
+
       {/* Aside separado en su propio componente */}
       <NavbarComponent
         components={components}
@@ -38,7 +42,7 @@ export const ComponentViewer = ({ components }) => {
         
         <div className='d-flex flex-column flex-lg-row gap-3'>
 
-          <div className="component-show w-100 d-flex flex-column align-items-center">
+          <div className="component-show w-100 d-flex flex-column align-items-center mb-lg-0 mb-3">
             <h2 className="h2">{activeComponent.name}</h2>
             <div className="component-result mt-5">{activeComponent.component}</div>
           </div>
@@ -92,8 +96,7 @@ export const ComponentViewer = ({ components }) => {
                 </pre>
               </div>
             </div>
-        </div>
-        
+          </div>
         </div>
       </div>
     </div>

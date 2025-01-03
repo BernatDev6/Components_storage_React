@@ -29,7 +29,9 @@ export const CardComp8 = () => {
 
 export const CardComp8CSS = `
 .card8 {
+  max-width: 500px;
   position: relative;
+  cursor: pointer;
   background: #f0f0f0;
   border-radius: 10px;
   overflow: hidden;
