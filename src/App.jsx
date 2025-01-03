@@ -35,6 +35,17 @@ import { LoaderComp4, LoaderComp4JSX, LoaderComp4CSS } from './components/loader
 import { LoaderComp5, LoaderComp5JSX, LoaderComp5CSS } from './components/loaders/loader5/LoaderComp5';
 import { LoaderComp6, LoaderComp6JSX, LoaderComp6CSS } from './components/loaders/loader6/LoaderComp6';
 import { LoaderComp7, LoaderComp7JSX, LoaderComp7CSS } from './components/loaders/loader7/LoaderComp7';
+import { LoaderComp8, LoaderComp8JSX, LoaderComp8CSS } from './components/loaders/loader8/LoaderComp8';
+import { LoaderComp9, LoaderComp9JSX, LoaderComp9CSS } from './components/loaders/loader9/LoaderComp9';
+import { LoaderComp10, LoaderComp10JSX, LoaderComp10CSS } from './components/loaders/loader10/LoaderComp10';
+import { LoaderComp11, LoaderComp11JSX, LoaderComp11CSS } from './components/loaders/loader11/LoaderComp11';
+import { LoaderComp12, LoaderComp12JSX, LoaderComp12CSS } from './components/loaders/loader12/LoaderComp12';
+import { LoaderComp13, LoaderComp13JSX, LoaderComp13CSS } from './components/loaders/loader13/LoaderComp13';
+import { LoaderComp14, LoaderComp14JSX, LoaderComp14CSS } from './components/loaders/loader14/LoaderComp14';
+import { LoaderComp15, LoaderComp15JSX, LoaderComp15CSS } from './components/loaders/loader15/LoaderComp15';
+import { LoaderComp16, LoaderComp16JSX, LoaderComp16CSS } from './components/loaders/loader16/LoaderComp16';
+import { LoaderComp17, LoaderComp17JSX, LoaderComp17CSS } from './components/loaders/loader17/LoaderComp17';
+import { LoaderComp18, LoaderComp18JSX, LoaderComp18CSS } from './components/loaders/loader18/LoaderComp18';
 import { MainRouter } from './routes/MainRouter';
 
 const App = () => {
@@ -307,6 +318,83 @@ const App = () => {
           component: <LoaderComp7 />,
           jsxCode: LoaderComp7JSX,
           cssCode: LoaderComp7CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader8',
+          component: <LoaderComp8 />,
+          jsxCode: LoaderComp8JSX,
+          cssCode: LoaderComp8CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader9',
+          component: <LoaderComp9 />,
+          jsxCode: LoaderComp9JSX,
+          cssCode: LoaderComp9CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader10',
+          component: <LoaderComp10 />,
+          jsxCode: LoaderComp10JSX,
+          cssCode: LoaderComp10CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader11',
+          component: <LoaderComp11 />,
+          jsxCode: LoaderComp11JSX,
+          cssCode: LoaderComp11CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader12',
+          component: <LoaderComp12 />,
+          jsxCode: LoaderComp12JSX,
+          cssCode: LoaderComp12CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader13',
+          component: <LoaderComp13 />,
+          jsxCode: LoaderComp13JSX,
+          cssCode: LoaderComp13CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader14',
+          component: <LoaderComp14 />,
+          jsxCode: LoaderComp14JSX,
+          cssCode: LoaderComp14CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader15',
+          component: <LoaderComp15 />,
+          jsxCode: LoaderComp15JSX,
+          cssCode: LoaderComp15CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader16',
+          component: <LoaderComp16 />,
+          jsxCode: LoaderComp16JSX,
+          cssCode: LoaderComp16CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader17',
+          component: <LoaderComp17 />,
+          jsxCode: LoaderComp17JSX,
+          cssCode: LoaderComp17CSS,
+          activeTab: 'jsx',
+        },
+        {
+          name: 'Loader18',
+          component: <LoaderComp18 />,
+          jsxCode: LoaderComp18JSX,
+          cssCode: LoaderComp18CSS,
           activeTab: 'jsx',
         },
       ]
